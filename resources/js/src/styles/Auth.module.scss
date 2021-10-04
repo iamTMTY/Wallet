@@ -1,0 +1,90 @@
+@import "../styles/variables";
+
+.site_header {
+    background-color: var(--primary-color);
+    padding: 10px var(--page-padding);
+    a {
+        color: var(--bg-color);
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+    background: rgba(248, 234, 243, 0.5);
+    padding: 50px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    width: 50vw;
+    min-width: 250px;
+
+    @media only screen and (max-width: $small-mobile-view) {
+        width: 90vw;
+        min-width: 90vw;
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 50px;
+        text-align: center;
+        color: rgba(27, 20, 51, 0.7);
+    }
+
+    input[type="checkbox"] {
+        border-radius: 0px;
+        border: 1px solid black;
+        margin-right: 10px;
+    }
+
+    input[type="text"] {
+        outline: none;
+        font-size: 0.8rem;
+        padding: 10px 20px;
+        width: 100%;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 5px;
+
+        &:focus {
+            border: 1px solid #7165e3;
+        }
+
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus {
+            width: 100%;
+            background-color: rgba(113, 101, 227, 0.63);
+            // border: 1px solid green;
+            -webkit-text-fill-color: unset;
+            -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    }
+
+    input[type="submit"] {
+        padding: 10px 0;
+        margin-bottom: 30px;
+    }
+}
+
+.link {
+    color: var(--primary-color);
+}
+
+.termsContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    label {
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+}

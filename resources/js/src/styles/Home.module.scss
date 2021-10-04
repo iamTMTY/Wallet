@@ -1,0 +1,284 @@
+@import "../styles/variables";
+
+.onboarding {
+    padding: 30px var(--page-padding) 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "onboardingHeader onboardingImg"
+        "onboardingText onboardingImg"
+        "onboardingCTA onboardingImg";
+
+    @media only screen and (max-width: $tab-view) {
+        // grid-template-columns: 2fr 1.5fr;
+        padding: 10px var(--page-padding) 0;
+    }
+
+    @media only screen and (max-width: $mobile-view) {
+        grid-template-areas:
+            "onboardingHeader onboardingImg"
+            "onboardingText ."
+            "onboardingCTA .";
+        // grid-template-columns: 2fr 1.75fr;
+    }
+}
+
+.onboarding_header {
+    grid-area: onboardingHeader;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    margin-bottom: 20px;
+
+    @media only screen and (max-width: $big-tab-view) {
+        font-size: 2rem;
+    }
+
+    @media only screen and (max-width: $small-tab-view) {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        line-height: 1.8rem;
+    }
+
+    @media only screen and (max-width: $mobile-view) {
+        width: 100%;
+    }
+}
+
+.onboarding_text {
+    grid-area: onboardingText;
+    width: 80%;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+
+    @media only screen and (max-width: $big-tab-view) {
+        font-size: 1rem;
+    }
+
+    @media only screen and (max-width: $small-tab-view) {
+        margin-bottom: 30px;
+        font-size: 0.8rem;
+        line-height: 1rem;
+    }
+
+    @media only screen and (max-width: $mobile-view) {
+        width: 150%;
+    }
+}
+
+.onboarding_cta {
+    grid-area: onboardingCTA;
+    // width: 80%;
+    max-width: 300px;
+    padding: 15px 0px;
+    margin-bottom: 15vw;
+
+    @media only screen and (max-width: $big-tab-view) {
+        margin-bottom: 50px;
+    }
+
+    @media only screen and (max-width: $mobile-view) {
+        width: 200%;
+        max-width: 200%;
+    }
+}
+
+.onboarding_bg {
+    grid-area: onboardingImg;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/phone.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    // background-position: 25%;
+    background-position: 25% top;
+
+    @media only screen and (max-width: $tab-view) {
+        background-size: cover;
+        background-position: 0% top;
+    }
+
+    @media only screen and (max-width: $mobile-view) {
+        background-size: contain;
+        background-position: 145% top;
+    }
+}
+
+.platforms {
+    display: grid;
+    align-items: end;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "platformBrief paymentSolutions"
+        "signIn paymentSolutions";
+
+    padding: 100px var(--page-padding);
+    background: rgba(248, 234, 243, 0.5);
+
+    @media only screen and (max-width: $tab-view) {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "platformBrief"
+            "paymentSolutions"
+            "signIn";
+        padding: 50px var(--page-padding);
+    }
+}
+
+.platform_brief {
+    grid-area: platformBrief;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+
+    @media only screen and (max-width: $tab-view) {
+        margin: 0 auto 30px;
+    }
+}
+
+.payment_solutions {
+    grid-area: paymentSolutions;
+    display: flex;
+    justify-content: space-evenly;
+
+    @media only screen and (max-width: $tab-view) {
+        margin-bottom: 30px;
+    }
+
+    @media only screen and (max-width: $mobile-view) {
+        flex-wrap: wrap;
+    }
+}
+
+.payment_solution {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background: #ffffff;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    @media only screen and (max-width: $mobile-view) {
+        margin: 0 20px 20px 0;
+    }
+
+    img {
+        width: 50%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 0.6rem;
+    }
+}
+
+.sign_in {
+    grid-area: signIn;
+    background-color: white;
+    padding: 10px 0;
+    width: 90%;
+    max-width: 280px;
+    margin: auto;
+}
+
+.choose_us {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px var(--page-padding) 50px;
+
+    @media only screen and (max-width: $small-tab-view) {
+        flex-direction: column-reverse;
+        // align-items: center;
+    }
+}
+
+.why_choose_us {
+    width: 50%;
+    // padding-top: 5%;
+
+    h2 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        img {
+            margin-right: 3%;
+            width: 20px;
+            height: auto;
+        }
+    }
+
+    @media only screen and (max-width: $tab-view) {
+        width: 40%;
+    }
+
+    @media only screen and (max-width: $small-tab-view) {
+        width: 100%;
+    }
+}
+
+.person_img_container {
+    // padding-top: 5%;
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+
+    @media only screen and (max-width: $tab-view) {
+        width: 60%;
+    }
+
+    @media only screen and (max-width: $small-tab-view) {
+        width: 100%;
+        height: 50vw;
+        margin-bottom: 30px;
+    }
+}
+
+.choose_us_bg {
+    width: 90%;
+    height: 100%;
+    background: url("../assets/person-operating-device.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+    // background-position:;
+
+    @media only screen and (max-width: $small-tab-view) {
+        background-size: cover;
+        width: 93%;
+        border-radius: 15px;
+    }
+}
+
+.dots {
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    width: 30%;
+    height: 60%;
+    top: -15%;
+    left: 0%;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 100%;
+    background: rgba(113, 101, 227, 0.63);
+}

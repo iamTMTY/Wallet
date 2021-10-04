@@ -1,0 +1,71 @@
+@import "../styles/variables";
+
+.site_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px var(--page-padding);
+
+    @media only screen and (max-width: $small-tab-view) {
+        padding: 10px var(--page-padding);
+    }
+}
+
+.site_logo {
+    color: var(--primary-color);
+}
+
+.site_nav {
+    width: 50%;
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media only screen and (max-width: $big-tab-view) {
+        width: 70%;
+    }
+
+    @media only screen and (max-width: $small-tab-view) {
+        width: max-content;
+        display: flex;
+        justify-content: end;
+
+        ul {
+            display: none;
+        }
+    }
+}
+
+.nav_btn_register {
+    padding: 7px 25px;
+}
+
+.nav_btn_login {
+    padding: 5px 25px;
+}
+
+.nav_links {
+    font-size: 0.8rem;
+}
+
+.menu {
+    display: none;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+
+    div {
+        width: 100%;
+        height: 2px;
+        border-radius: 1000px;
+        background-color: var(--primary-color);
+    }
+
+    @media only screen and (max-width: $small-tab-view) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

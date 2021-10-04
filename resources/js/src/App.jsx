@@ -1,15 +1,15 @@
 import React from 'react';
 import { Route, BrowserRouter, Switch } from "react-router-dom";
 import ReactDOM from 'react-dom';
-import Home from './pages/Home'
-import Contact from './pages/Contact'
+import './App.scss'
 import PageNotFound from './pages/PageNotFound'
-import './styles/App.scss'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Register from './pages/Register';
 
 function App() {
     return (
       <div className="App">
-
         <BrowserRouter>
           <Switch>
             <Route
@@ -18,8 +18,14 @@ function App() {
               render={(props) => <Home />}
             />
             <Route
-              path="/contact"
-              render={(props) => <Contact />}
+              path="/login"
+              exact
+              render={(props) => <Login />}
+            />
+            <Route
+              path="/register"
+              exact
+              render={(props) => <Register />}
             />
             <Route render={(props) => <PageNotFound />} />
           </Switch>

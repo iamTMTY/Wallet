@@ -1,0 +1,54 @@
+@import "./styles/variables";
+
+:root {
+    --bg-color: white;
+    --text-color: black;
+    --primary-color: #7165e3;
+    --secondary-color: #f8eaf3;
+    --page-padding: 80px;
+
+    @media only screen and (max-width: $big-tab-view) {
+        --page-padding: 50px;
+    }
+
+    @media only screen and (max-width: $tab-view) {
+        --page-padding: 30px;
+    }
+
+    @media only screen and (max-width: $small-tab-view) {
+        --page-padding: 20px;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+    outline: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+li {
+    list-style: none;
+}
+
+.btn-stroke {
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+    border-radius: 5px;
+    font-weight: bold;
+}
+.btn-fill {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+//     padding: 5px 20px;
