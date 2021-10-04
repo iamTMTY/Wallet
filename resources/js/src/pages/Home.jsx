@@ -1,6 +1,6 @@
 // import { styles } from 'laravel-mix';
 import React from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styles from '../styles/Home.module.scss'
 import airtimeReachargeImg from '../assets/airtime-recharge.svg'
 import electricityReachargeImg from '../assets/electricity-recharge.svg'
@@ -12,25 +12,22 @@ import Footer from '../components/Footer';
 
 function Home() {
 
+    document.title = 'Pay-On | Home'
+
     let dots = []
-    for(let i = 0; i < 49; i++) {
-        dots.push(<div key={i} className={styles.dot}></div>)                        
+    for (let i = 0; i < 49; i++) {
+        dots.push(<div key={i} className={styles.dot}></div>)
     }
-    
+
     return (
         <>
-            <Header/>
+            <Header />
             <main className={styles.home}>
                 <section className={styles.onboarding}>
-                    {/* <div className={styles.onboarding_left}> */}
-                        <h2 className={styles.onboarding_header}>Easy, Fast and Reliable <br/> Digital Payment Solution <br /> For Everyone </h2>
-                        <p className={styles.onboarding_text}>With Pay-On, you can  make all ypour payments, Airtime and Data recharge in just few clicks.</p>
-                        <Link to="/register" className={`btn-fill ${styles.onboarding_cta}`}>Create Account</Link>
-                    {/* </div> */}
-                    {/* <div className={styles.onboarding_right}> */}
-                        <div className={styles.onboarding_bg}></div>
-                        {/* <img src={phone} alt="woman holding phone" /> */}
-                    {/* </div> */}
+                    <h2 className={styles.onboarding_header}>Easy, Fast and Reliable <br /> Digital Payment Solution <br /> For Everyone </h2>
+                    <p className={styles.onboarding_text}>With Pay-On, you can  make all ypour payments, Airtime and Data recharge in just few clicks.</p>
+                    <Link to="/register" className={`btn-fill ${styles.onboarding_cta}`}>Create Account</Link>
+                    <div className={styles.onboarding_bg}></div>
                 </section>
                 <section className={styles.platforms}>
                     <p className={styles.platform_brief}>The best Platform for Bills <br /> Payments and VTU Services</p>
