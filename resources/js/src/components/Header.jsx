@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import styles from '../styles/Header.module.scss'
 
 const Header = () => {
@@ -8,12 +9,12 @@ const Header = () => {
 
       <nav className={styles.site_nav} role="navigation">
         <ul>
-          <li><a className={styles.nav_links} href="">Home</a></li>
-          <li><a className={styles.nav_links} href="">About Us</a></li>
-          <li><a className={styles.nav_links} href="">Services</a></li>
-          <li><a className={styles.nav_links} href="">Pricing</a></li>
-          <li><a className={`btn-stroke ${styles.nav_btn_login} ${styles.nav_links}`} href="">Login</a></li>
-          <li><a className={`btn-fill ${styles.nav_btn_register} ${styles.nav_links}`} href="">Register</a></li>
+          <li><Link className={styles.nav_links} to="#">Home</Link></li>
+          <li><Link className={styles.nav_links} to="#">About Us</Link></li>
+          <li><Link className={styles.nav_links} to="#">Services</Link></li>
+          <li><Link className={styles.nav_links} to="#">Pricing</Link></li>
+          <li><Link className={`btn-stroke ${styles.nav_btn_login} ${styles.nav_links}`} to="/login">Login</Link></li>
+          <li><Link className={`btn-fill ${styles.nav_btn_register} ${styles.nav_links}`} to="/register">Register</Link></li>
         </ul>
         <div className={styles.menu}>
           <div></div>

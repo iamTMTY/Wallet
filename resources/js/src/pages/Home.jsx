@@ -1,5 +1,6 @@
 // import { styles } from 'laravel-mix';
 import React from 'react';
+import {Link} from 'react-router-dom'
 import styles from '../styles/Home.module.scss'
 import airtimeReachargeImg from '../assets/airtime-recharge.svg'
 import electricityReachargeImg from '../assets/electricity-recharge.svg'
@@ -24,7 +25,7 @@ function Home() {
                     {/* <div className={styles.onboarding_left}> */}
                         <h2 className={styles.onboarding_header}>Easy, Fast and Reliable <br/> Digital Payment Solution <br /> For Everyone </h2>
                         <p className={styles.onboarding_text}>With Pay-On, you can  make all ypour payments, Airtime and Data recharge in just few clicks.</p>
-                        <button className={`btn-fill ${styles.onboarding_cta}`}>Create Account</button>
+                        <Link to="/register" className={`btn-fill ${styles.onboarding_cta}`}>Create Account</Link>
                     {/* </div> */}
                     {/* <div className={styles.onboarding_right}> */}
                         <div className={styles.onboarding_bg}></div>
@@ -51,7 +52,7 @@ function Home() {
                             <p>Electricity Recharge</p>
                         </div>
                     </div>
-                    <button className={`btn-stroke ${styles.sign_in}`} >Sign in</button>
+                    <Link to="/login" className={`btn-stroke ${styles.sign_in}`} >Sign in</Link>
                 </section>
                 <section className={styles.choose_us}>
                     <div className={styles.why_choose_us}>
